@@ -77,35 +77,46 @@
 			}
 			/* END Modern CSS Reset */
 
-			/* https://www.happyhues.co/palettes/15 */
 			body {
-				background: #faeee7;
-				color: #594a4e;
-			}
-
-			h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6 {
-				color: #33272a;
-			}
-
-			.flex-center {
 				display: flex;
+
+				background-color: #ececec;
+				background-image: url(/img/1.png);
+				background-repeat: repeat-x;
+				background-position: center;
+				background-size: contain;
+
+				justify-content: center;
+				align-items: stretch;
+			}
+
+			h1 {
+				font-size: 20vw;
+				line-height: 1;
+
+				display: flex;
+
+				width: 100%;
+
+				text-align: center;
+
+				color: transparent;
+				background-color: #ececec;
+				background-image: url(/img/1.png);
+				background-repeat: repeat;
+				background-position: center;
+				-webkit-background-clip: text;
+						background-clip: text;
+				background-size: contain;
+
 				justify-content: center;
 				align-items: center;
-
+				filter: sepia(1) saturate(1000) hue-rotate(88deg) invert(1);
 			}
 
-			.header {
-				text-align: center;
-				font-size: 3rem;
-			}
 		</style>
 	</head>
-	<body class="flex-center">
-		<h1 class="header">My Brain <br>Is Worms</h1>
+	<body>
+		<h1><span>My Brain <br>Is Worms</span></h1>
 	</body>
 </html>
