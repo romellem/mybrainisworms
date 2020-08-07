@@ -82,39 +82,76 @@
 
 				background-color: #ececec;
 				background-image: url(/img/1.png);
-				background-repeat: repeat-x;
+				background-repeat: repeat;
 				background-position: center;
-				background-size: contain;
+				background-size: cover;
 
 				justify-content: center;
 				align-items: stretch;
 			}
 
 			h1 {
-				font-size: 20vw;
+				font-size: 28vw;
 				line-height: 1;
 
-				/* display: flex; */
-				display: inline;
+				position: relative;
+
+				display: flex;
 
 				width: 100%;
 
 				text-align: center;
 
-				color: transparent;
-				background-color: #ececec;
-				background-image: url(/img/1.png);
-				background-repeat: repeat;
-				background-position: center;
-				-webkit-background-clip: text;
-						background-clip: text;
-				background-size: contain;
+				color: #ea0f4e;
+				background: #fff;
 
 				justify-content: center;
 				align-items: center;
-				filter: sepia(1) saturate(100) hue-rotate(88deg) invert(1);
 			}
 
+			h1 > span {
+				text-shadow: 5px 5px 0px yellow;
+			}
+
+			@supports (mix-blend-mode: lighten) {
+				h1 {
+					color: #000;
+					mix-blend-mode: multiply;
+				}
+
+				h1::before {
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+
+					display: block;
+
+					content: '';
+					pointer-events: none;
+
+					background-color: #ececec;
+					background-image: url(/img/1.png);
+					background-repeat: repeat;
+					background-position: center;
+					background-size: cover;
+
+					mix-blend-mode: screen;
+					filter: sepia(.3) saturate(100) hue-rotate(80deg) contrast(1.5) blur(2px) invert(1);
+				}
+			}
+
+			@media (min-width: 500px) {
+				h1 {
+					font-size: 20vw;
+				}
+
+				body,
+				h1::before {
+					background-size: contain;
+				}
+			}
 		</style>
 	</head>
 	<body>
