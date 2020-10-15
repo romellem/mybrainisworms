@@ -10,6 +10,15 @@
 				font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
 					'Helvetica Neue', Arial, sans-serif;
 			}
+			
+			/* https://css-tricks.com/css-fix-for-100vh-in-mobile-webkit/ */
+			body {
+				min-height: 100vh;
+				min-height: -webkit-fill-available;
+			}
+			html {
+				height: -webkit-fill-available;
+			}
 
 			/* START Modern CSS Reset */
 			/* @see https://github.com/hankchizljaw/modern-css-reset */
@@ -39,7 +48,7 @@
 				margin: 0;
 			}
 			body {
-				min-height: 100vh;
+				/* min-height: 100vh; */
 				scroll-behavior: smooth;
 				text-rendering: optimizeSpeed;
 				line-height: 1.5;
